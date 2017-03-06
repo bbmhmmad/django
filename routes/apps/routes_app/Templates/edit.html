@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Update</title>
+	</head>
+	<body>
+		{%if data%}
+			<h2>Edit Product {{data.id}}</h2>
+			<form action="{%url 'products:update' data.id %}" method='post'>
+				{% csrf_token %}
+				Name:<input type='text' name='name' placeholder='{{data.name}}'>
+				Description:<input type='text' name='description' placeholder='{{data.description}}'>
+				Price:<input type='text' name='price' placeholder='{{data.price}}'>
+				<input type='submit' value='Update'>
+			</form>
+		{%endif%}
+	</body>
+</html>

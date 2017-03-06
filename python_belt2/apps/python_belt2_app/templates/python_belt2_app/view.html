@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+			{% for row in data %}
+				<h2>{{row.destination}}</h2>
+				Planned by:{{row.user.all.0}}<br>
+				Travel Date From:{{row.start}}<br>
+				Travel Date To:{{row.end}}<br>
+			{% endfor %}
+
+			
+				Others joining the trip:{{row.user.all | slice:"1:"}}
+				
+			
+
+			
+	</body>
+</html>

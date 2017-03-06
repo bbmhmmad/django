@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Products Page</title>
+	</head>
+	<body>
+		<h2>Products</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Price</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+			{%for row in data%}
+				<tr>
+					<td>{{row.name}}</td>
+					<td>{{row.description}}</td>
+					<td>{{row.price}}</td>
+					<td><a href="{%url 'products:show' row.id %}">Show</a>|<a href="{%url 'products:edit' row.id %}">Edit</a> | <a href="{%url 'products:destroy' row.id %}">Delete</a>  </td>
+				</tr>
+			{%endfor%}
+			</tbody>
+		</table>
+
+		<a href="{%url 'products:new' %}">Add new product</a>
+
+	</body>
+</html>

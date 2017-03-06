@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		Welcome 
+		{% if name%}
+			{{num}}
+		{% endif %}
+
+		<!-- {% if num %}
+			<h2>{{num}} friends have tagged you</h2>
+
+		{%endif%} -->
+
+		{% for row in your_poked %}
+		<hr>
+			{{row.poker__name}} poked you {{row.count}} times
+		{% endfor %}
+
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Alias</th>
+					<th>Email</th>
+					<th>Poke History</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for row in data %}
+					<tr>
+						<td>{{row.name}}</td>
+						<td>{{row.alias}}</td>
+						<td>{{row.email}}</td>
+						<td>{{row.count}}</td>
+						<td><a href="{% url 'poke:poke' row.id %}">POKE!</a></td>
+ 					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<a href="{% url 'login:logout' user_id %}">logout</a>
+	</body>
+</html>

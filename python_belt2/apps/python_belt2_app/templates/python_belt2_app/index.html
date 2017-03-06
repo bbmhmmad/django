@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+			<h2>Hello 
+			{% for row in name%}
+				{{row.name}}
+			{%endfor%}
+
+			</h2>
+
+			Your Trip Schedules
+
+			<table>
+				<thead>
+					<tr>
+						<th>Destination</th>
+						<th>Travel Start Date</th>
+						<th>Travel End Date</th>
+						<th>Plan</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					{% for row in user_trips %}
+						<tr>
+							<td>{{row.destination}}</td>
+							<td>{{row.start}}</td>
+							<td>{{row.end}}</td>
+							<td>{{row.plan}}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Destination</th>
+						<th>Travel Start Date</th>
+						<th>Travel End Date</th>
+						<th>Wanna Join?</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					{% for row in all_trips %}
+						<tr>
+							<td>{{row.user.all.0}}</td>
+							<td><a href="{% url 'belt2:view' row.id %}">{{row.destination}}</a></td>
+							<td>{{row.start}}</td>
+							<td>{{row.end}}</td>
+							<td><a href="{% url 'belt2:join' row.id %}">Join</a></td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+					<a href="{% url 'belt2:add' %}">Add</a>
+					<a href="{% url 'login:logout' %}">Logout</a>
+	</body>
+</html>

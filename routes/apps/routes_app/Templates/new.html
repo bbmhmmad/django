@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add Product</title>
+	</head>
+	<body>
+		<h2>Add a new Product</h2>
+		<form action="{%url 'products:create'%}" method='post'>
+			{% csrf_token %}
+			Name<input type='text' name='name'>
+			Description<input type='text' name='description'>
+			Price<input type='text' name='price'>
+			<input type='submit' value='Create'>
+		</form>
+	</body>
+</html>
