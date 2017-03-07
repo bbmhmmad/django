@@ -1,0 +1,174 @@
+*{
+	margin:0px;
+}
+
+#container{
+	width:1400px;
+}
+
+#image{
+	width:1400px;
+}
+
+#modernize,.features_images,{
+	display: inline-block;
+	vertical-align: top;
+}
+#header{
+	background-color: #1a1a1a;
+}
+h4{
+		color:white;
+	margin-left: 540px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+#features{
+	background-color: #1a1a1a;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+.features_boxes{
+	display: inline-block;
+	width:200px;
+	padding: 10px;
+	margin-left: 10px;
+}
+
+.features_header, .features_text{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.features_text{
+	display: inline-block;
+	vertical-align: top;
+	width: 145px;
+	margin-left: 3px;
+}
+
+#buy_now{
+	color:white;
+	background-color: #131313;
+}
+	#buy_now p{
+		color:#9a9c9c;
+	}
+
+#buy_text{
+	display: inline-block;
+	padding: 35px;
+	vertical-align: middle;
+}
+	#buy_text h3{
+		margin-bottom: 15px;
+	}
+
+button{
+	vertical-align: middle;
+	background-color: orange;
+	color:white;
+	padding: 15px 40px;
+	border-radius: 5px;
+	margin-left: 75px;
+	border-style: none;
+	font-weight: bold;
+	font-size: .8em;
+}
+
+#portfolio a{
+	text-decoration: none;
+	color:orange;
+	display: inline-block;
+	margin-left: 700px;
+	font-style: italic;
+}
+
+#portfolio h3{
+	display: inline-block;
+	padding: 20px;
+	color:white;
+}
+
+#portfolio, #projects{
+	background-color: #393939;
+}
+
+.projects_boxes{
+	margin: 17px;
+}
+
+.projects_boxes, .projects_text{
+	display: inline-block;
+	width:200px;
+	vertical-align: top;
+}
+
+#projects a{
+	text-decoration: none;
+	color:orange;
+}
+
+#projects h5{
+	display: inline-block;
+	margin: 5px;
+}
+p{
+	color:white;
+}
+
+h5{
+	color:orange;
+	font-size: 1.2em;
+}
+.projects_images{
+	border-style: solid;
+	border-width: 3px;
+	border-color: gray;
+}
+
+#modernize{
+	padding-bottom: 20px;
+}
+
+	#modernize img{
+		padding: 10px;
+	}
+
+	#modernize h4{
+		padding-top: 25px;
+	}
+#tabs{
+	background-color: #393939;
+	padding: 10px;
+}
+
+	#tabs li{
+		display: inline;
+		list-style-type: none;
+		}
+		#tabs li:first-child{
+			padding-left: 20px;
+		}
+			#tabs li:after{
+				content:"|";
+				color:gray;
+				padding:20px;
+			}
+
+			#tabs li a{
+				text-decoration: none;
+				color:gray;
+				font-weight: bold;
+			}
+#main_image{
+	height: 355px;
+	display: inline-block;
+	border-bottom: solid;
+	border-bottom-width: 5px;
+	border-color: gray;
+}
+
